@@ -1,0 +1,347 @@
+/*--------------------------------------
+  STILE GENERALE DEL BODY
+--------------------------------------*/
+body {
+    background-image: url('images/sfondo.jpg'); 
+    background-size: cover; /*Adatta lo sfondo a tutta la pagina*/
+    font-family: 'Roboto', sans-serif; 
+    background-position: center center; 
+    color: #333; 
+    margin: 0; 
+    min-height: 100vh; /*Imposta l'altezza minima del body per coprire tutta la pagina*/
+}
+
+/*--------------------------------------
+  STILE DELLA NAVBAR
+--------------------------------------*/
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9); /*Colore semi-trasparente*/
+    border-bottom: 2px solid #eaeaea;
+}
+
+/*Titolo Navbar*/
+.navbar-brand {
+    font-family: 'Luckiest Guy', cursive; 
+    font-size: 2rem; 
+    color: #ff6b6b;
+}
+
+.navbar-brand:hover {
+    color: #333 !important; /*Colore nero quando il mouse passa sopra*/
+}
+
+/*Item Navbar*/
+.navbar-nav .nav-item {
+    margin-right: 10px; 
+}
+
+/*Link della Navbar*/
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #555 !important; 
+    padding: 0.5rem 1.2rem; 
+    margin-right: 15px; 
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff6b6b !important; /*Colore rosso quando il mouse passa sopra*/
+}
+
+/*--------------------------------------
+  STILE DELLE CARD
+--------------------------------------*/
+.project-card {
+    border: 1px solid #e0e0e0; 
+    border-radius: 12px; /*Angoli arrotondati*/
+    background: rgba(255, 255, 255, 0.8); /*Sfondo semi-trasparente*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*Ombra leggera*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*Animazione per hover*/
+    margin-top: 30px; 
+}
+
+/*Testo dentro le card*/
+.project-card .card-text {
+    margin-top: 15px; 
+}
+
+/*Effetto hover*/
+.project-card:hover {
+    transform: scale(1.05); /*Aumenta la dimensione della card*/
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /*Ombra più intensa*/
+}
+
+/*Titolo delle card*/
+.home-content .card-title {
+    font-family: 'Gloria Hallelujah', cursive; 
+    font-size: 1.5rem; 
+    color: #333; 
+    font-weight: bold; 
+}
+
+/*Pulsante dentro le card*/
+.btn-primary {
+    background-color: #ff6b6b; 
+    border: none; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.btn-primary:hover {
+    background-color: #000000; 
+    transform: scale(1.1); 
+}
+
+/*--------------------------------------
+  CONTENUTO DELLA HOME PAGE
+--------------------------------------*/
+.home-content {
+    margin-top: 150px; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/*Titolo*/
+.home-content h1 {
+    color: #8B0000; 
+    font-family: 'Lobster', cursive; 
+    margin-bottom: 30px; 
+}
+
+/*Paragrafo*/
+.home-content p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 30px; 
+}
+
+/*--------------------------------------
+  STILE PER DISPOSITIVI MOBILI
+--------------------------------------*/
+@media (max-width: 767px) {
+    /*Adatta la card su schermi piccoli*/
+    .project-card {
+        width: 100%; 
+    }
+    .navbar-nav .nav-link {
+        margin-right: 0; /*Elimina margine tra gli item*/
+    }
+}
+
+
+.custom-title {
+    font-family: 'Lobster', cursive; 
+    color: #8B0000; /* Puoi mantenere il colore che preferisci */
+    margin-bottom: 30px; /* Aggiungi uno spazio inferiore, se necessario */
+}
+
+
+
+#pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-card {
+    border: 1px solid #e0e0e0; 
+    width: 180px;
+    background: rgba(255, 255, 255, 0.8); /*Sfondo semi-trasparente*/
+    color: #333; /* Colore nero per il testo */
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    padding: 10px;
+}
+
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /*Ombra più intensa al passaggio del mouse*/
+}
+
+.pokemon-img {
+    max-width: 100px;
+    margin: 2px auto;
+    display: block;
+    cursor: pointer;
+}
+
+.catch-btn {
+    background-color: #ff6b6b; /* Colore rosso per il pulsante */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin-top: 2px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /*Transizione per colore e dimensione al passaggio del mouse*/
+}
+
+.catch-btn:hover {
+    background-color: #000000; /* Colore rosso più scuro al passaggio del mouse */
+    transform: scale(1.1); /*Aumenta dimensione pulsante al passaggio del mouse*/
+}
+
+/* Stile Titolo Card */
+.pokemon-card .card-title {
+    font-family: 'Gloria Hallelujah', cursive; 
+    font-size: 15px;
+    color: #333; 
+    margin-bottom: 1px;
+    font-weight: bold; 
+}
+
+.container.text-center {
+    margin-top: 100px; /* Aggiungi un margine superiore */
+}
+
+/* Pulsanti di navigazione */
+.pagination-buttons .btn {
+    background-color: #db6666; /* Colore di sfondo rosso chiaro */
+    color: #fff; /* Colore del testo (icona) bianco */
+    font-size: 24px; /* Dimensione dell'icona */
+    padding: 12px 20px; /* Spazio attorno all'icona */
+    border: none; /* Rimuovi il bordo */
+    border-radius: 50%; /* Forma rotonda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida */
+    cursor: pointer; /* Aggiungi il cursore per indicare che è cliccabile */
+}
+
+.pagination-buttons .btn:hover {
+    background-color: #000000; /* Colore rosso più scuro al passaggio del mouse */
+    transform: scale(1.1); /* Aumenta la dimensione al passaggio del mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombra più intensa */
+}
+
+.pagination-buttons .btn i {
+    margin-right: 0; /* Rimuovi lo spazio extra a destra delle icone */
+    font-size: 24px; /* Imposta la dimensione dell'icona */
+}
+
+/* Stile per l'allineamento dei pulsanti */
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spazio tra i pulsanti */
+    margin-top: 20px;
+}
+
+
+/* Stile generico per il Modal */
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.95); /* Sfondo semi-trasparente */
+    border-radius: 24px; /* Angoli arrotondati per un effetto più morbido */
+    padding: 30px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Ombra soffusa per un effetto di profondità */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transizione per un'animazione fluida */
+}
+
+/* Sfondo del modal */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.7); /* Sfumato di sfondo */
+    opacity: 0.8; /* Resa più morbida */
+    transition: opacity 0.3s ease;
+}
+
+/* Titolo del Modal */
+.modal-header {
+    border-bottom: 2px solid #ff6b6b; /* Linea inferiore colorata */
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-family: 'Luckiest Guy', cursive;
+    color: #ff6b6b; /* Colore accattivante per il titolo */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Corpo del Modal */
+.modal-body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 16px;
+    text-align: center; /* Centra il testo */
+}
+
+/* Sezioni individuali dentro il modal */
+.modal-body .stat-label {
+    font-weight: bold;
+    color: #ff6b6b; /* Colore per i titoli delle statistiche */
+    margin-top: 10px;
+}
+
+.modal-body .stat-value {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+/* Chiusura del Modal */
+.modal-footer {
+    border-top: 2px solid #ff6b6b; /* Linea sopra il footer */
+    padding-top: 20px;
+}
+
+/* Pulsante di chiusura */
+.close {
+    color: #ff6b6b;
+    font-size: 30px;
+    background: none;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.close:hover {
+    color: #000000; /* Colore più scuro al passaggio del mouse */
+    transform: scale(1.2); /* Leggera animazione al passaggio del mouse */
+}
+
+.btn-catch:hover {
+    background-color: #d24c4c; /* Colore più scuro al passaggio del mouse */
+    transform: scale(1.1); /* Ingrossa leggermente il pulsante */
+}
+
+/* Animazione di apertura del modal */
+.modal.fade .modal-dialog {
+    transform: translateY(-50px); /* Partenza dall'alto */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translateY(0); /* Scivola dentro */
+    opacity: 1;
+}
+
+.release-btn {
+    background-color: #ff6b6b; /* Colore rosso per il pulsante */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin-top: 2px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /*Transizione per colore e dimensione al passaggio del mouse*/
+}
+
+.release-btn:hover {
+    background-color: #000000; /* Colore rosso più scuro al passaggio del mouse */
+    transform: scale(1.1); /*Aumenta dimensione pulsante al passaggio del mouse*/
+}
+
+.text-warning {
+    color: #caa119
+}
+
+#pokedex-list .card .card-title {
+    font-family: 'Gloria Hallelujah', cursive; 
+    font-size: 1.5rem; 
+    color: #333; 
+    font-weight: bold; 
+}

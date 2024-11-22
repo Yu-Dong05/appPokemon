@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Pokémon</title>
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    
+    <!--Font Awesome icone-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!--Custom CSS-->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Barra di navigazione - Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm py-3">
+    <div class="container-fluid">
+        <!--Navbar - Titolo-->
+        <a class="navbar-brand mx-auto text-center" href="home.html">
+            <span class="navbar-title">PokéCatch</span>
+        </a>
+
+        <!--Pulsante per aprire il menu di navigazione sui dispositivi mobili - NON FINITO-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Menu di navigazione-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pokemon.html">All Pokémon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pokedex.html">My Pokédex</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Contenuto della pagina-->
+<div class="container text-center" style="margin-top: 100px;">
+
+    <!--Titolo pagina-->
+    <h1 class="display-4 fw-bold custom-title">All Pokémon</h1>
+
+    <!--Contenitore per tutti i Pokémon-->
+    <div id="pokemon-list" class="row g-4 mt-4 justify-content-center"></div>
+    
+    <!--Bottoni per andare avanti e indietro nella pagina-->
+    <div class="pagination-buttons mt-4">
+
+        <!--Previous Button-->
+        <button class="btn btn-secondary" id="prev-btn" onclick="loadPokemonPage('prev')">
+            <i class="fas fa-arrow-left"></i> <!--icona per la freccia verso sinistra-->
+        </button>
+
+        <!--Next Button-->
+        <button class="btn btn-secondary" id="next-btn" onclick="loadPokemonPage('next')">
+            <i class="fas fa-arrow-right"></i>  <!--icona per la freccia verso destra-->
+        </button>
+
+    </div>
+</div>
+
+<!--Modal - Visualizzare i dettagli dei pokémon-->
+<div class="modal fade" id="pokemonDetailsModal" tabindex="-1" aria-labelledby="pokemonDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <!--Modal Header-->
+            <div class="modal-header">
+                <h5 class="modal-title" id="pokemonDetailsModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!--Modal Body-->
+            <div class="modal-body text-center">
+                <img id="pokemonDetailImage" src="" class="img-fluid mb-3" style="max-width: 200px;">
+                <p id="pokemonType"></p>
+                <p id="pokemonAbilities"></p>
+                <p id="pokemonHeight"></p>
+                <p id="pokemonWeight"></p>
+            </div>
+
+            <!--Modal Footer (il basso del Modal dove ci sta il bottone 'close')-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Modal - Visualizzare i messaggi d'errore / informazioni-->
+<div class="modal fade" id="notifyMessageModal" tabindex="-1" aria-labelledby="notifyMessageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <!--Modal Header-->
+            <div class="modal-header">
+                <h5 class="modal-title" id="notifyMessageModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!--Modal Body-->
+            <div class="modal-body text-center">
+                <img src="" alt="" id="notifyMessageImage">
+                <p id="notifyMessage"></p>
+            </div>
+
+            <!--Modal Footer (il basso del Modal dove ci sta il bottone 'close')-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Bootstrap JS - Interazione con l'utente-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--Script di riferimento-->
+<script src="pokemon.js"></script>
+
+</body>
+</html>
